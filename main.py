@@ -58,6 +58,19 @@ def add_quiz(quizzes):
     print(f"\n✅ 퀴즈가 추가되었습니다! (현재 {len(quizzes)}개)\n")
 
 
+def list_quizzes(quizzes):
+    """등록된 퀴즈의 문제 목록을 번호와 함께 출력한다."""
+    if not quizzes:
+        print("📭 등록된 퀴즈가 없습니다. 먼저 퀴즈를 추가해 주세요.")
+        return
+
+    print(f"\n📋 등록된 퀴즈 목록 (총 {len(quizzes)}개)\n")
+    print("-" * 40)
+    for number, quiz in enumerate(quizzes, start=1):
+        print(f"[{number}] {quiz.question}")
+    print("-" * 40)
+
+
 def play_quiz(quizzes):
     """퀴즈를 순서대로 출제하고, 맞힌 개수를 반환한다.
 
@@ -98,7 +111,7 @@ def main():
         elif choice == 2:
             add_quiz(quizzes)
         elif choice == 3:
-            print("🚧 퀴즈 목록 (준비 중)")
+            list_quizzes(quizzes)
         elif choice == 4:
             print("🚧 점수 확인 (준비 중)")
         else:
