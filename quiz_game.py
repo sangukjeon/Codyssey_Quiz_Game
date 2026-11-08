@@ -17,6 +17,8 @@ class QuizGame:
         self.state_file = state_file
         self.quizzes = []  # Quiz 객체 리스트
         self.best = None  # 최고 기록: {"score": 점수, "correct": 맞힌 수, "total": 문제 수}
+        # 불러오기가 끝나기 전에 저장하면 빈 데이터로 덮어쓸 수 있으므로 상태를 기록한다.
+        self.is_loaded = False
 
     # ---------- 파일 저장/불러오기 ----------
     def load(self):
@@ -89,6 +91,7 @@ class QuizGame:
     def run(self):
         """데이터를 불러온 뒤 메뉴를 반복해서 보여 주고, 선택한 기능을 실행한다."""
         self.load()
+        self.is_loaded = True
         while True:
             self.show_menu()
             choice = self.input_number("선택: ", 1, self.MENU_COUNT)
