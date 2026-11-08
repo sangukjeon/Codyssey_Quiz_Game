@@ -62,7 +62,9 @@ Codyssey_Quiz_Game/
 ├── default_data.py   # 기본 퀴즈 8개 (첫 실행 또는 파일 손상 시 사용)
 ├── state.json        # 실행 중 자동 생성되는 데이터 파일 (Git에는 올리지 않음)
 ├── .gitignore        # Git 관리에서 제외할 파일 목록
-└── README.md         # 프로젝트 설명
+├── README.md         # 프로젝트 설명
+└── docs/
+    └── screenshots/  # 실행 화면, Git 기록, 개발 환경 스크린샷
 ```
 
 **클래스 구조**
@@ -122,4 +124,31 @@ Codyssey_Quiz_Game/
 | `git merge` | 다른 브랜치의 작업을 현재 브랜치에 합친다 | `feature/play` → `main` 병합 |
 | `git clone` | 원격 저장소를 통째로 내 컴퓨터에 복제한다 | 복제 실습 |
 | `git pull` | 원격 저장소의 새 커밋을 가져와 합친다 | 복제 실습 후 반영 |
+
 - 2026-11-08: clone/pull 실습 완료
+
+## 8. 실행 화면
+
+| 메뉴 및 잘못된 입력 처리 | 퀴즈 추가 |
+|---|---|
+| ![메뉴](docs/screenshots/menu.png) | ![퀴즈 추가](docs/screenshots/add_quiz.png) |
+
+| 퀴즈 목록 | 퀴즈 풀기 (정답/오답) |
+|---|---|
+| ![퀴즈 목록](docs/screenshots/list.png) | ![퀴즈 풀기](docs/screenshots/play.png) |
+
+| 퀴즈 결과 및 최고 점수 갱신 | 재실행 후 데이터 유지 + 점수 확인 |
+|---|---|
+| ![퀴즈 결과](docs/screenshots/play_result.png) | ![재실행 및 점수 확인](docs/screenshots/restart.png) |
+
+**Git 커밋 그래프 (`git log --oneline --graph`)**
+
+![git log](docs/screenshots/git_log.png)
+
+**clone / pull 실습**
+
+![clone pull](docs/screenshots/clone_pull.png)
+
+**개발 환경**
+
+![개발 환경](docs/screenshots/dev_env.png)
