@@ -122,3 +122,4 @@ Codyssey_Quiz_Game/
 | `git merge` | 다른 브랜치의 작업을 현재 브랜치에 합친다 | `feature/play` → `main` 병합 |
 | `git clone` | 원격 저장소를 통째로 내 컴퓨터에 복제한다 | 복제 실습 |
 | `git pull` | 원격 저장소의 새 커밋을 가져와 합친다 | 복제 실습 후 반영 |
+- 2026-11-08: clone/pull 실습 완료
